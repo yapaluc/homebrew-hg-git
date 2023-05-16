@@ -16,3 +16,9 @@ Upgrade to the latest version:
 ```
 brew upgrade hg-git
 ```
+
+Uninstall:
+
+```
+brew uninstall hg-git
+```
