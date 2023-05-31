@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.6/hg-git_Darwin_arm64.tar.gz"
-      sha256 "b07adef844588cdeca62e749019e8a293b6b9fc4ecfb8d0d1375a9fcd34f537e"
+    if Hardware::CPU.intel?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.7/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "b7f80ede331d94a53b16db771fb72d91a58e51d24f1d050c56e5124430ec9319"
 
       def install
         bin.install "hg-git"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.6/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "099c7787990578b1573d55ecaa8867d502b068f4077b940504d7a68a013d912d"
+    if Hardware::CPU.arm?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.7/hg-git_Darwin_arm64.tar.gz"
+      sha256 "d38281c6a99dac3c2190110636c36d3d79ff81c5f639edb4cf35e1fd6c21fa53"
 
       def install
         bin.install "hg-git"
@@ -27,17 +27,17 @@ class HgGit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.6/hg-git_Linux_x86_64.tar.gz"
-      sha256 "5fbc68f3053f63436d2b63a6bf1d6d1eec4565c06fab5d3d47ec70e73c5d859f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.7/hg-git_Linux_arm64.tar.gz"
+      sha256 "fd022e439b523ba19d736f98c5dc9bb1879e5350c514b073e4beed027ac850e0"
 
       def install
         bin.install "hg-git"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.6/hg-git_Linux_arm64.tar.gz"
-      sha256 "4e012a07a0f6173b78f1c27e3faa4ffa3466813a0c05498458c2bff626105b98"
+    if Hardware::CPU.intel?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.7/hg-git_Linux_x86_64.tar.gz"
+      sha256 "2edf09fe9d4471fc198f6062fe74a93c426fa09c35afa96f36bf99211912ca0e"
 
       def install
         bin.install "hg-git"
