@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.10"
+  version "0.1.11"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.10/hg-git_Darwin_arm64.tar.gz"
-      sha256 "fde30bd503a43ff82ed5fbfe7e3916282c2a83abe165f436153c9e1f4dd5bf67"
+    if Hardware::CPU.intel?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.11/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "dc8c56fc6227ba516292996b3c9e83e0c0b9e17670833eea2f580fca896b7718"
 
       def install
         bin.install "hg-git"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.10/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "9ccd3bc71f3b66ef7989374a386546be3704832e0c989f1c047078a715625440"
+    if Hardware::CPU.arm?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.11/hg-git_Darwin_arm64.tar.gz"
+      sha256 "0ed072ee57347ca9a4f8fbd70b2fa26fee7d16c3be5e093fe6b398d5ac1665a4"
 
       def install
         bin.install "hg-git"
@@ -28,16 +28,16 @@ class HgGit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.10/hg-git_Linux_arm64.tar.gz"
-      sha256 "15201324bb4f9c35878ae01dbbd7a0ae9573c24503bfff6629206e98e7dd8c53"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.11/hg-git_Linux_arm64.tar.gz"
+      sha256 "0bdd6ffb00d6b60a9f7426c00fa2567fc2fbf707a31521472b30eec2b9d9224a"
 
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.10/hg-git_Linux_x86_64.tar.gz"
-      sha256 "6c47b5d8a4dc8f8cf32b10f0d21a91eed238a0669ff486b166f5110f70b11df6"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.11/hg-git_Linux_x86_64.tar.gz"
+      sha256 "21d5d82342855449bb14ce12d989059a66df4c6f86c8adb0772724df51f66125"
 
       def install
         bin.install "hg-git"
