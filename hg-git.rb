@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.13"
+  version "0.1.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.13/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "41683c5cc3a6629091c188e8c979e87cfa9e22566e8e6ceade26f715fc55a142"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.14/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "1e67ee36e34b207e7f75c8ac233384bac0a045ffae45431ce7254fcc93437b78"
 
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.13/hg-git_Darwin_arm64.tar.gz"
-      sha256 "04e13fc417fea945ebd1a28fdbd1fb7c361b9dff20aa74b1e5cdb8669126fcf8"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.14/hg-git_Darwin_arm64.tar.gz"
+      sha256 "685e2e9814f70a4acebdbe9243c960d40da0d4656b111886d2b41c2f3ec381fc"
 
       def install
         bin.install "hg-git"
@@ -27,17 +27,17 @@ class HgGit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.13/hg-git_Linux_arm64.tar.gz"
-      sha256 "680c659f23260e301688ebfaf5586d323cd1e58230c127b180bc98aabed9aa8e"
+    if Hardware::CPU.intel?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.14/hg-git_Linux_x86_64.tar.gz"
+      sha256 "20c758d7eb166672a38d0e20838e23f750dda482e8b71537ade519efff0af535"
 
       def install
         bin.install "hg-git"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.13/hg-git_Linux_x86_64.tar.gz"
-      sha256 "e014742a132ff68ad730fcb5cae1a1772680da3bffb843a0b989598f183727e6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.14/hg-git_Linux_arm64.tar.gz"
+      sha256 "a97771d3bce2bf3ebb312c4a3e5aabb4bb380e7aaae2d568b663192d671c43f4"
 
       def install
         bin.install "hg-git"
