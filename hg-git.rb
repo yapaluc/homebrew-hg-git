@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.18"
+  version "0.1.19"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.18/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "f89001e53e4d7a07b7f0f63a8cc9bd9c25eb9ba3ae0fcf0acf0cb180460e8822"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.19/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "1153f2d343a3836b28a018b109c96853028c3c88925939588726a3c0250c9bb4"
 
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.18/hg-git_Darwin_arm64.tar.gz"
-      sha256 "836cc447e42fed1ff573f4ad286991abab441c3c2f9f382b9dce80d02fb4ad80"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.19/hg-git_Darwin_arm64.tar.gz"
+      sha256 "3eff87fd332e4298d4f024a68b265eb99ce230d2631d57e7bec79974bab1c6e6"
 
       def install
         bin.install "hg-git"
@@ -28,16 +28,16 @@ class HgGit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.18/hg-git_Linux_arm64.tar.gz"
-      sha256 "c6b1713644c0d51644a9294bf8a230826e9ea80798007f8e05b3fc2f7d7bffd6"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.19/hg-git_Linux_arm64.tar.gz"
+      sha256 "3ced65093b6f8dec2ed2c72b83af5a9a87a251d29a0b8bd1b0dbf31afece4ac8"
 
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.18/hg-git_Linux_x86_64.tar.gz"
-      sha256 "e58da7614dfe6880d6d1ce794aa2a3806a9431a2ad35a30a07ce46030b3586f3"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.19/hg-git_Linux_x86_64.tar.gz"
+      sha256 "e4f3bc04586d41bab1909fec72ba4184e9dd7b5580b95fab627ea86c0d8202c8"
 
       def install
         bin.install "hg-git"
