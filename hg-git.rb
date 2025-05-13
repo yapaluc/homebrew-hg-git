@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.37"
+  version "0.1.41"
 
   on_macos do
-    on_intel do
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.37/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "b1cf8beafabb29aaf7d7149034ddf8aa0b8c6cad84ead9b298d59994380baafe"
+    if Hardware::CPU.intel?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.41/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "164ec77707c94b54f6d720d5ddd660b4af1ca967f6cebc0349031459077f4ffa"
 
       def install
         bin.install "hg-git"
       end
     end
-    on_arm do
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.37/hg-git_Darwin_arm64.tar.gz"
-      sha256 "4aaad378a3e75a8e6e26adff17180129796190b211f38245429a559b1281dc94"
+    if Hardware::CPU.arm?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.41/hg-git_Darwin_arm64.tar.gz"
+      sha256 "2cfb6279c3679578bec9876a4c65a2f2a296e42d8df01970a22bd77f80278b5d"
 
       def install
         bin.install "hg-git"
@@ -27,24 +27,18 @@ class HgGit < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yapaluc/hg-git/releases/download/v0.1.37/hg-git_Linux_x86_64.tar.gz"
-        sha256 "81182e95854418cb44a12cf06334cbab936fcbfcd12725b4e07080e5652e2c2b"
-
-        def install
-          bin.install "hg-git"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.41/hg-git_Linux_x86_64.tar.gz"
+      sha256 "69039dfbdfccf0fac622b7ace59ed6e9ad2d4741796d4f3e04ebb75c7b8243ce"
+      def install
+        bin.install "hg-git"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/yapaluc/hg-git/releases/download/v0.1.37/hg-git_Linux_arm64.tar.gz"
-        sha256 "ab9c118c370c2207e568256380f9c06b9bf23a27c0f2b9693380dadf8e5d0f86"
-
-        def install
-          bin.install "hg-git"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.41/hg-git_Linux_arm64.tar.gz"
+      sha256 "17e0906b3a911ed85b9de9d49ecd4ddb9bc43d0750097d347114c57b539bb52e"
+      def install
+        bin.install "hg-git"
       end
     end
   end
