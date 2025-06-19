@@ -5,20 +5,20 @@
 class HgGit < Formula
   desc ""
   homepage "https://github.com/yapaluc/hg-git"
-  version "0.1.48"
+  version "0.1.49"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.48/hg-git_Darwin_x86_64.tar.gz"
-      sha256 "d1df344a97aa3a1ea043154321ca6dee7b4f9cae856e360fc3ec3707f96ccd82"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.49/hg-git_Darwin_x86_64.tar.gz"
+      sha256 "448ee2d2cc619b5e54f61870c408128f3f837c41483eda1dc72a2ad4095ed6f8"
 
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.48/hg-git_Darwin_arm64.tar.gz"
-      sha256 "6cc239c670d1593a4646635a9487fb7b9c98446063d353f06f50c500c6fa1520"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.49/hg-git_Darwin_arm64.tar.gz"
+      sha256 "4e8e7e0e0f2f9c263b6337951cda5728aede91d135a43317f1a1325f99a2e212"
 
       def install
         bin.install "hg-git"
@@ -28,15 +28,15 @@ class HgGit < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.48/hg-git_Linux_x86_64.tar.gz"
-      sha256 "6995e3b973dadcfb8a950184b249a10f5ad48485783c99a171f63cc39c93e65d"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.49/hg-git_Linux_x86_64.tar.gz"
+      sha256 "50088207e4e7605e7cf22673909a941a00ae10ec9bbd1cbbca685ab26810440e"
       def install
         bin.install "hg-git"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.48/hg-git_Linux_arm64.tar.gz"
-      sha256 "a5c744b93911113452df25cc75877bab1dcd21078d63076b50af7417e91a02bb"
+      url "https://github.com/yapaluc/hg-git/releases/download/v0.1.49/hg-git_Linux_arm64.tar.gz"
+      sha256 "939ca3ab61531c7518b83d6556f27e749a3bb45c26899d83cc2ce05e7f844bab"
       def install
         bin.install "hg-git"
       end
